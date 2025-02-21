@@ -25,7 +25,7 @@ app.use(cookieParser())
 
 
 
-//routes import
+//routes import 
 import userRouter from './routes/user.routes.js'
 import healthcheckRouter from "./routes/healthcheck.routes.js"
 import tweetRouter from "./routes/tweet.routes.js"
@@ -37,6 +37,7 @@ import playlistRouter from "./routes/playlist.routes.js"
 import dashboardRouter from "./routes/dashboard.routes.js"
 
 //routes declaration
+//we write app.get and stuff , when we do everything like routing and controllers in the same , but now as we have segregatted the stuff in routes and controller , so this is the standard thing to use using app.use (like middleware syntax)
 app.use("/api/v1/healthcheck", healthcheckRouter)
 app.use("/api/v1/users", userRouter)
 app.use("/api/v1/tweets", tweetRouter)
